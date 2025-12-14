@@ -10,6 +10,12 @@ https://templatemo.com/tm-578-first-portfolio
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
+.project-image{
+  border-radius: var(--border-radius-medium);
+  display: block;
+  width: 100%;
+}
+
 :root {
   --white-color: #ffffff;
   --primary-color: #535da1;
@@ -722,6 +728,15 @@ strong {
 /*---------------------------------------
   PROJECTS              
 -----------------------------------------*/
+#projects-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projects-container .row > [class*="col-"] {
+  display: flex;
+}
+
 .projects-thumb {
   background: var(--section-bg-color);
   border: 2px solid var(--white-color);
@@ -732,6 +747,15 @@ strong {
   margin-bottom: 24px;
   padding: 40px;
   transition: all ease 0.5s;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projects-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-thumb:hover {
@@ -767,6 +791,38 @@ strong {
   color: var(--secondary-color);
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+
+.projects-description {
+  font-size: var(--copyright-font-size);
+  color: var(--p-color);
+  margin-bottom: 15px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.projects-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-large);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
 }
 
 
